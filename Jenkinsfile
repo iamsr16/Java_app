@@ -9,7 +9,7 @@ pipeline {
     stage('Create Version') {
       steps {
         script {
-          ARTI_VER = "${BRANCH_NAME}-${BUILD_NUMBER}"
+          ARTI_VER = "${env.BRANCH_NAME}-${BUILD_NUMBER}"
           echo "${ARTI_VER}"
         }
       }
